@@ -1,0 +1,45 @@
+{
+	"name": "astro-cfworkers-template",
+	"type": "module",
+	"version": "0.0.1",
+	"engines": {
+		"node": ">=22.12.0"
+	},
+	"scripts": {
+		"dev": "dotenv -- astro dev",
+		"build": "astro build",
+		"preview": "astro build && astro preview",
+		"astro": "astro",
+		"generate-types": "wrangler types",
+		"deploy": "astro build && wrangler deploy",
+		"cf-typegen": "wrangler types",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "drizzle-kit migrate"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "^13.2.1",
+		"@astrojs/react": "^5.0.2",
+		"@fortawesome/fontawesome-svg-core": "^7.2.0",
+		"@fortawesome/free-solid-svg-icons": "^7.2.0",
+		"@fortawesome/react-fontawesome": "^3.3.0",
+		"@tailwindcss/vite": "^4.2.2",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"astro": "^6.1.9",
+		"daisyui": "^5.5.19",
+		"drizzle-orm": "^0.45.2",
+		"postgres": "^3.4.9",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
+		"tailwindcss": "^4.2.2"
+	},
+	"devDependencies": {
+		"@types/node": "^25.5.2",
+		"dotenv-cli": "^8.0.0",
+		"drizzle-kit": "^0.31.10",
+		"wrangler": "^4.85.0"
+	},
+	"overrides": {
+		"vite": "^7"
+	}
+}

@@ -1,0 +1,18 @@
+---
+import {
+  icon as renderIcon,
+  type IconDefinition,
+} from "@fortawesome/fontawesome-svg-core";
+
+export interface Props {
+  icon: IconDefinition;
+  class?: string;
+  title?: string;
+}
+
+const { icon, class: className = "", title } = Astro.props;
+const rendered = icon ? renderIcon(icon).html.join("") : "";
+const ariaLabel = title ?? icon?.iconName ?? "";
+---
+
+<span class={className} role="img" aria-label={ariaLabel} set:html={rendered} />
