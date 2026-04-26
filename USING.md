@@ -16,4 +16,5 @@ copy the following elements from `[replace with path for this template]` and app
 - services structure
 - server actions structure
 - theme switcher component, service, and server actions
+- `.env.example`
 ```
