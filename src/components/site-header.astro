@@ -1,0 +1,33 @@
+---
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import AwesomeAstroIcon from "./icons/awesome-astro-icon.astro";
+import ThemeSwitcherButton from "./theme-switcher-button";
+import SiteLogo from "./site-logo.astro";
+import services from "@/services/services";
+
+const { theme } = services(Astro.locals);
+const currentTheme = theme.getTheme();
+---
+
+<header class="z-30">
+  <nav class="navbar w-full">
+    <div class="flex-none lg:hidden">
+      <label
+        for="site-drawer"
+        aria-label="open sidebar"
+        class="btn btn-square btn-ghost"
+      >
+        <AwesomeAstroIcon icon={faBars} class="text-[1.25rem]" />
+      </label>
+    </div>
+    <div class="mx-2 flex-1 px-2 text-xl font-semibold tracking-wide">
+      <a href="/"><SiteLogo /></a>
+    </div>
+    <div class="hidden flex-none lg:block">
+      <ul class="menu menu-horizontal text-base">
+        <li><a href="/">Home</a></li>
+      </ul>
+    </div>
+    <ThemeSwitcherButton initialTheme={currentTheme} client:load />
+  </nav>
+</header>

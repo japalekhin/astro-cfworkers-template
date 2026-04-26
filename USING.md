@@ -26,5 +26,8 @@ Copy the following elements from `https://github.com/japalekhin/astro-cfworkers-
 - Services structure
 - Server actions structure
 - Theme switcher component, service, and server actions
+- Default layout
+- Site header
+- Site footer
 - `.env.example`
 ```
