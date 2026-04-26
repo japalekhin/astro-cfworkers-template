@@ -29,5 +29,6 @@ Copy the following elements from `https://github.com/japalekhin/astro-cfworkers-
 - Default layout
 - Site header
 - Site footer
+- Middleware structure
 - `.env.example`
 ```
